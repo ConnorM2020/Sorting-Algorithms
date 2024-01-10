@@ -1,4 +1,4 @@
-
+import java.util.Random;
 public class quicksort {
     static void swap(int[] arr, int a, int b ) {
         int temp = arr[a];
@@ -31,8 +31,6 @@ public class quicksort {
     static void quickSort(int[] arr, int low, int high) {
         if(low < high) { 
             int pi = partition(arr, low, high);
-
-          
             // seperately sort each partition section
             // from before, and after partition
             quickSort(arr, low, pi-1); // first partiton - up to last element
@@ -43,13 +41,19 @@ public class quicksort {
         System.out.println();
     }
     public static void main(String[] args) {
-        int[] arr = { 10, 7, 8, 9, 1, 5 };
+        Random rand = new Random();
+      
+        int[] arr = new int[20]; // length of random 20 elements, then sorted
+        int random = 1;
+        for(int i = 0; i < 20; i++ ) {
+            arr[i] = random;
+            random  = rand.nextInt(20)  + 1; // 0-20
+        }
         System.out.println("Before any paritions");
         print(arr);
-
         // 0 - N-1 length - last element
         quickSort(arr, 0, arr.length-1);
         System.out.println("Finished: ");
-       print(arr);
+        print(arr);
     }
 }
