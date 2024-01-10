@@ -47,7 +47,7 @@ public class quicksort {
         int random = 1;
         for(int i = 0; i < 20; i++ ) {
             arr[i] = random;
-            random  = rand.nextInt(20)  + 1; // 0-20
+            random  = rand.nextInt(20)  + 1; // 1-20
         }
         return arr;
     }
