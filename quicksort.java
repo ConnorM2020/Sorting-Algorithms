@@ -40,15 +40,19 @@ public class quicksort {
         }
         System.out.println();
     }
-    public static void main(String[] args) {
+    // Produce a random array sample
+    public static int[] randomArray() {
         Random rand = new Random();
-      
         int[] arr = new int[20]; // length of random 20 elements, then sorted
         int random = 1;
         for(int i = 0; i < 20; i++ ) {
             arr[i] = random;
             random  = rand.nextInt(20)  + 1; // 0-20
         }
+        return arr;
+    }
+    public static void main(String[] args) {
+        int[] arr = randomArray();
         System.out.println("Before any paritions");
         print(arr);
         // 0 - N-1 length - last element
