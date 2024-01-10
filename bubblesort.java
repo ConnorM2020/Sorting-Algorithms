@@ -22,8 +22,6 @@ public class bubblesort {
         }
         return arr;
     }
-
-
     // sorting function
     public static void bubbleSort(int[] arr) {
         // two pointers, swap i, with j+1, j+2 and so forth
@@ -37,7 +35,6 @@ public class bubblesort {
             }
         }
     }
-
     public static void main(String[] args) {
 
         int[] arr = randomArray();
